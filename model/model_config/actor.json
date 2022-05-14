@@ -1,0 +1,252 @@
+{
+    "backend": "tensorflow",
+    "class_name": "Sequential",
+    "config": {
+        "layers": [
+            {
+                "class_name": "InputLayer",
+                "config": {
+                    "batch_input_shape": [
+                        null,
+                        170000
+                    ],
+                    "dtype": "float32",
+                    "name": "input_1",
+                    "ragged": false,
+                    "sparse": false
+                }
+            },
+            {
+                "class_name": "Dense",
+                "config": {
+                    "activation": "relu",
+                    "activity_regularizer": null,
+                    "bias_constraint": null,
+                    "bias_initializer": {
+                        "class_name": "Zeros",
+                        "config": {}
+                    },
+                    "bias_regularizer": null,
+                    "dtype": "float32",
+                    "kernel_constraint": null,
+                    "kernel_initializer": {
+                        "class_name": "GlorotUniform",
+                        "config": {
+                            "seed": null
+                        }
+                    },
+                    "kernel_regularizer": null,
+                    "name": "dense",
+                    "trainable": true,
+                    "units": 1024,
+                    "use_bias": true
+                }
+            },
+            {
+                "class_name": "LayerNormalization",
+                "config": {
+                    "axis": [
+                        1
+                    ],
+                    "beta_constraint": null,
+                    "beta_initializer": {
+                        "class_name": "Zeros",
+                        "config": {}
+                    },
+                    "beta_regularizer": null,
+                    "center": true,
+                    "dtype": "float32",
+                    "epsilon": 0.001,
+                    "gamma_constraint": null,
+                    "gamma_initializer": {
+                        "class_name": "Ones",
+                        "config": {}
+                    },
+                    "gamma_regularizer": null,
+                    "name": "layer_normalization",
+                    "scale": true,
+                    "trainable": true
+                }
+            },
+            {
+                "class_name": "Dense",
+                "config": {
+                    "activation": "relu",
+                    "activity_regularizer": null,
+                    "bias_constraint": null,
+                    "bias_initializer": {
+                        "class_name": "Zeros",
+                        "config": {}
+                    },
+                    "bias_regularizer": null,
+                    "dtype": "float32",
+                    "kernel_constraint": null,
+                    "kernel_initializer": {
+                        "class_name": "GlorotUniform",
+                        "config": {
+                            "seed": null
+                        }
+                    },
+                    "kernel_regularizer": null,
+                    "name": "dense_1",
+                    "trainable": true,
+                    "units": 512,
+                    "use_bias": true
+                }
+            },
+            {
+                "class_name": "LayerNormalization",
+                "config": {
+                    "axis": [
+                        1
+                    ],
+                    "beta_constraint": null,
+                    "beta_initializer": {
+                        "class_name": "Zeros",
+                        "config": {}
+                    },
+                    "beta_regularizer": null,
+                    "center": true,
+                    "dtype": "float32",
+                    "epsilon": 0.001,
+                    "gamma_constraint": null,
+                    "gamma_initializer": {
+                        "class_name": "Ones",
+                        "config": {}
+                    },
+                    "gamma_regularizer": null,
+                    "name": "layer_normalization_1",
+                    "scale": true,
+                    "trainable": true
+                }
+            },
+            {
+                "class_name": "Dense",
+                "config": {
+                    "activation": "relu",
+                    "activity_regularizer": null,
+                    "bias_constraint": null,
+                    "bias_initializer": {
+                        "class_name": "Zeros",
+                        "config": {}
+                    },
+                    "bias_regularizer": null,
+                    "dtype": "float32",
+                    "kernel_constraint": null,
+                    "kernel_initializer": {
+                        "class_name": "GlorotUniform",
+                        "config": {
+                            "seed": null
+                        }
+                    },
+                    "kernel_regularizer": null,
+                    "name": "dense_2",
+                    "trainable": true,
+                    "units": 256,
+                    "use_bias": true
+                }
+            },
+            {
+                "class_name": "LayerNormalization",
+                "config": {
+                    "axis": [
+                        1
+                    ],
+                    "beta_constraint": null,
+                    "beta_initializer": {
+                        "class_name": "Zeros",
+                        "config": {}
+                    },
+                    "beta_regularizer": null,
+                    "center": true,
+                    "dtype": "float32",
+                    "epsilon": 0.001,
+                    "gamma_constraint": null,
+                    "gamma_initializer": {
+                        "class_name": "Ones",
+                        "config": {}
+                    },
+                    "gamma_regularizer": null,
+                    "name": "layer_normalization_2",
+                    "scale": true,
+                    "trainable": true
+                }
+            },
+            {
+                "class_name": "Dense",
+                "config": {
+                    "activation": "relu",
+                    "activity_regularizer": null,
+                    "bias_constraint": null,
+                    "bias_initializer": {
+                        "class_name": "Zeros",
+                        "config": {}
+                    },
+                    "bias_regularizer": null,
+                    "dtype": "float32",
+                    "kernel_constraint": null,
+                    "kernel_initializer": {
+                        "class_name": "GlorotUniform",
+                        "config": {
+                            "seed": null
+                        }
+                    },
+                    "kernel_regularizer": null,
+                    "name": "dense_3",
+                    "trainable": true,
+                    "units": 128,
+                    "use_bias": true
+                }
+            },
+            {
+                "class_name": "Dense",
+                "config": {
+                    "activation": "tanh",
+                    "activity_regularizer": null,
+                    "bias_constraint": null,
+                    "bias_initializer": {
+                        "class_name": "Zeros",
+                        "config": {}
+                    },
+                    "bias_regularizer": null,
+                    "dtype": "float32",
+                    "kernel_constraint": null,
+                    "kernel_initializer": {
+                        "class_name": "GlorotUniform",
+                        "config": {
+                            "seed": null
+                        }
+                    },
+                    "kernel_regularizer": null,
+                    "name": "dense_4",
+                    "trainable": true,
+                    "units": 28,
+                    "use_bias": true
+                }
+            },
+            {
+                "class_name": "Lambda",
+                "config": {
+                    "arguments": {},
+                    "dtype": "float32",
+                    "function": [
+                        "4wEAAAAAAAAAAAAAAAEAAAACAAAAEwAAAHMIAAAAfACIABQAUwCpAU6pAKkB2gF4qQHaC3VwcGVy\nX2JvdW5kcgIAAAD6KS9ob21lL3lobGltL1B5Y2hhcm1Qcm9qZWN0cy9ERFBHL21vZGVsLnB52gg8\nbGFtYmRhPk0AAADzAAAAAA==\n",
+                        null,
+                        [
+                            10
+                        ]
+                    ],
+                    "function_type": "lambda",
+                    "module": "model",
+                    "name": "lambda",
+                    "output_shape": null,
+                    "output_shape_module": null,
+                    "output_shape_type": "raw",
+                    "trainable": true
+                }
+            }
+        ],
+        "name": "sequential"
+    },
+    "keras_version": "2.4.0"
+}
